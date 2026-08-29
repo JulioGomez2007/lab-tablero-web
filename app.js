@@ -8,6 +8,13 @@ function mostrarEstadoVacio() {
   aviso.hidden = TAREAS.length > 0;
 }
 
+function actualizarContador() {
+  const pendientes = TAREAS.filter(function (t) {
+    return !t.hecha;
+  }).length;
+  document.querySelector("#contador").textContent = pendientes + " pendientes";
+}
+
 function render() {
   const lista = document.querySelector("#lista");
   lista.innerHTML = "";
@@ -17,7 +24,9 @@ function render() {
     li.textContent = t.texto;
     lista.appendChild(li);
   });
+
  mostrarEstadoVacio();
+ actualizarContador();
 }
 
 render();
