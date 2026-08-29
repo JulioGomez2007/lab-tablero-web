@@ -12,13 +12,7 @@ body {
   background: var(--fondo);
   color: var(--texto);
 }
-.vacio {
-  border: 1px dashed var(--borde);
-  padding: 14px;
-  border-radius: 4px;
-  color: #7c8b99;
-  text-align: center;
-}
+
 .tablero {
   max-width: 480px;
   margin: 0 auto;
@@ -46,4 +40,12 @@ h1 {
 .tarea.hecha {
   color: #7c8b99;
   text-decoration: line-through;
+}
+
+.vacio {
+  border: 1px dashed var(--borde);
+  padding: 14px;
+  border-radius: 4px;
+  color: #7c8b99;
+  text-align: center;
 }
